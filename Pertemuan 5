@@ -1,0 +1,24 @@
+ Shapefile adalah sebuah file yang berisi tentang tata letak daerah-daerah dan garis-garis wilayah di muka bumi ini.
+ Ada pula contohnya di ESRI menyediakan shapefile itu sendiri dan kita tidak tahu bagaimana cara membuat suatu
+ shapefile itu sendiri.jadi disini saya menjelaskan atau memberikan tata cara memmbuat shapefile pada python.
+
+PEMBAHASAN
+Dibawah ini adalah tata cara membuat shapefile pada python.
+ Contoh shapefile polygon, polyline, dan point.
+
+	Import Shapefile
+	a = shapefile.Writer(param)--> Param dalam writer ini  shapetype apa yang akan kitabuat 
+	a.point(x,y)-->  membuat file shp.
+      Atau
+   a.poly([x,y],[v,w]) ---> membuat file shp.
+	a.field(‘nama’,’typedata’,’jumlahkarakter’)---> membuat file dbf.
+   a.record(‘isi’) ¬¬--->  mengisi file dbf.
+	a.shp(‘namafile.shp’)
+        save(‘namafile’) ¬¬---> menyimpan file.
+                
+Pembuatan file dalam dbf
+	>> field(‘nama’,’tipe data’,’jumlah karakter’) --->  membuat sebuah atribut pada table. 
+	>> Record(‘nama’) ---> menambahkan data atribut
+
+Kesimpulan :
+                   Jadi didalam python kita dapat membuat sebuah data shapefile sendiri.
